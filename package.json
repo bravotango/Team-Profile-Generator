@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/bravotango/Team-Profile-Generator/issues"
   },
-  "homepage": "https://github.com/bravotango/Team-Profile-Generator#readme"
+  "homepage": "https://github.com/bravotango/Team-Profile-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
 }
