@@ -5,6 +5,7 @@ describe("Engineer", () => {
   const id = 12;
   const email = "samir.nagheenanaj@initech.com";
   const gitHubUsername = "bravotango";
+  const role = "Engineer";
   const returnedGitHub = `<a href="https://github.com/${gitHubUsername}">https://github.com/${gitHubUsername}</a>`;
 
   const testEngineer = new Engineer(name, id, email, gitHubUsername);
@@ -26,6 +27,6 @@ describe("Engineer", () => {
   });
 
   it("Should return the Engineer role when requested", () => {
-    expect(testEngineer.getRole()).toBe("Engineer");
+    expect(testEngineer.getRole()).toBe(role);
   });
 });

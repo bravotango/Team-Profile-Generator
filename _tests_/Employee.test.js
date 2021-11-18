@@ -4,6 +4,7 @@ describe("Getters", () => {
   const name = "Peter Gibbons";
   const id = 33;
   const email = "peter.gibbons@initech.com";
+  const role = "Employee";
 
   const testEmployee = new Employee(name, id, email);
 
@@ -20,6 +21,6 @@ describe("Getters", () => {
   });
 
   it("Should return the Employee role when requested", () => {
-    expect(testEmployee.getRole()).toBe("Employee");
+    expect(testEmployee.getRole()).toBe(role);
   });
 });
