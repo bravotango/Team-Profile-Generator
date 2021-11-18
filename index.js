@@ -23,12 +23,12 @@ const htmlCard = (e) => {
       icon = "<i class='bi bi-cup-straw'></i>";
       break;
     case Employee.Intern:
-      roleInfo = `<strong>School:</strong> ${e.getSchool()}`;
+      roleInfo = `<strong>School</strong> ${e.getSchool()}`;
       employeeTypeClasses = "bg-success bg-gradient text-light";
       icon = "<i class='bi bi-mortarboard-fill'></i>";
       break;
     case Employee.Engineer:
-      roleInfo = `<strong>Github:</strong> ${e.getGithub()}`;
+      roleInfo = `<strong>Github</strong> ${e.getGithub()}`;
       employeeTypeClasses = "bg-success text-dark bg-opacity-10 text-light";
       icon = "<i class='bi bi-cup'></i>";
       break;
@@ -38,16 +38,12 @@ const htmlCard = (e) => {
     <div class="card-header ${employeeTypeClasses}">
       <h5 class='card-title'>
       ${icon}
-      ${e.getRole()}
+      ${e.getRole()}:
+      ${e.getName().toUpperCase()}
       </h5>
     </div>
     <div class='card-body'>
       <ul class='list-group'>
-        <li class='list-group-item list-group-item-primary'>
-          <h6>
-            ${e.getName().toUpperCase()} 
-          </h6>
-        </li>
         <li class='list-group-item'>
           <strong>Id </strong> ${e.getId()}
         </li>        
@@ -116,7 +112,7 @@ const questions = () => {
       {
         type: "input",
         name: "managerId",
-        message: "What is the manager's employee ID?",
+        message: "What is the manager's employee Id?",
       },
       {
         type: "input",
@@ -157,13 +153,13 @@ const repeatQuestions = () => {
       },
       {
         type: "input",
-        message: "What is the employee's Email?",
-        name: "employeeEmail",
+        message: "What is the employee's Id?",
+        name: "employeeId",
       },
       {
         type: "input",
-        message: "What is the employee's Id?",
-        name: "employeeId",
+        message: "What is the employee's Email?",
+        name: "employeeEmail",
       },
       {
         type: "input",
