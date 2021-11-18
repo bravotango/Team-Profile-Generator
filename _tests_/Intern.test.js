@@ -5,6 +5,7 @@ describe("Intern", () => {
   const id = 22;
   const email = "milton.waddams@initech.com";
   const school = "University of Washington";
+  const role = "Intern";
   const testIntern = new Intern(name, id, email, school);
 
   it("Should return the correct school", () => {
@@ -24,6 +25,6 @@ describe("Intern", () => {
   });
 
   it("Should return the Intern role when requested", () => {
-    expect(testIntern.getRole()).toBe("Intern");
+    expect(testIntern.getRole()).toBe(role);
   });
 });

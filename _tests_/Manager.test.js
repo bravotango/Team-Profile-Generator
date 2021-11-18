@@ -5,6 +5,7 @@ describe("Manager", () => {
   const id = 0;
   const email = "bill.lumbergh@initech.com";
   const officeNumber = "cubical45";
+  const role = "Manager";
   const testManager = new Manager(name, id, email, officeNumber);
 
   it("Should return correct office number", () => {
@@ -24,6 +25,6 @@ describe("Manager", () => {
   });
 
   it("Should return the Manager role when requested", () => {
-    expect(testManager.getRole()).toBe("Manager");
+    expect(testManager.getRole()).toBe(role);
   });
 });
