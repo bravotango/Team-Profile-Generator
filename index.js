@@ -25,9 +25,34 @@ const htmlCard = (e) => {
       roleInfo = `Github: ${e.getGithub()}`;
       break;
   }
-  return `<div class='card'><h5 class='card-header'>${e.getRole()}</h5><div class='card-body'><h5>Name: ${e.getName()}</h5><p>Id: ${e.getName()}</p><p><a href="mailto:${
-    e.employeeEmail
-  }">${e.getEmail()}</a></p><p>${roleInfo}</p></div></div>`;
+  return `<div class="col-sm-12 col-lg-6">
+  <div class='card'>
+    <div class="card-header">
+      <h5 class='card-title'>
+      ${e.getRole()}
+      </h5>
+    </div>
+    <div class='card-body'>
+      <ul class='list-group'>
+        <li class='list-group-item list-group-item-primary'>
+          Name: ${e.getName()}
+        </li>
+        <li class='list-group-item'>
+          Id: ${e.getId()}
+        </li>        
+        <li class='list-group-item'>
+          Email: 
+          <a href="mailto:${e.employeeEmail}">
+             ${e.getEmail()}
+          </a>
+        </li>
+        <li class='list-group-item list-group-item-secondary'>
+          ${roleInfo}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>`;
 };
 
 const displayEmployees = (employees) => {
@@ -49,11 +74,15 @@ const generateHTML = (employees) => {
       <title>Team Profile</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container p-5">
       <div class="row">
-        <h1>Meet the Team</h1>
+        <h1 class="text-center">Meet the Team</h1>
       </div>
-       ${displayEmployees(employees)}
+    </div>
+    <div class="container">
+      <div class="row g-4">
+        ${displayEmployees(employees)}
+      </div>
     </div>
   </body>
   </html>`;
