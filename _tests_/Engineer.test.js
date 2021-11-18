@@ -24,4 +24,8 @@ describe("Engineer", () => {
   it("Should return the Engineer email when requested", () => {
     expect(testEngineer.getEmail()).toBe(email);
   });
+
+  it("Should return the Engineer role when requested", () => {
+    expect(testEngineer.getRole()).toBe("Engineer");
+  });
 });

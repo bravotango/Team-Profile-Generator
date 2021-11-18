@@ -3,7 +3,7 @@ const Intern = require("../lib/Intern.js");
 describe("Intern", () => {
   const name = "Milton Waddams";
   const id = 22;
-  const email = "milton.waddams@home.com";
+  const email = "milton.waddams@initech.com";
   const school = "University of Washington";
   const testIntern = new Intern(name, id, email, school);
 
@@ -21,5 +21,9 @@ describe("Intern", () => {
 
   it("Should return the Intern email when requested", () => {
     expect(testIntern.getEmail()).toBe(email);
+  });
+
+  it("Should return the Intern role when requested", () => {
+    expect(testIntern.getRole()).toBe("Intern");
   });
 });

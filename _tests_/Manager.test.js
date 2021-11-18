@@ -22,4 +22,8 @@ describe("Manager", () => {
   it("Should return the Manager email when requested", () => {
     expect(testManager.getEmail()).toBe(email);
   });
+
+  it("Should return the Manager role when requested", () => {
+    expect(testManager.getRole()).toBe("Manager");
+  });
 });

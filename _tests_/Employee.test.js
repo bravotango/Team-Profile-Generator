@@ -18,4 +18,8 @@ describe("Getters", () => {
   it("Should return the Employee email when requested", () => {
     expect(testEmployee.getEmail()).toBe(email);
   });
+
+  it("Should return the Employee role when requested", () => {
+    expect(testEmployee.getRole()).toBe("Employee");
+  });
 });
