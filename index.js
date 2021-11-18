@@ -29,7 +29,7 @@ const htmlCard = (e) => {
       break;
     case Employee.Engineer:
       roleInfo = `<strong>Github:</strong> ${e.getGithub()}`;
-      employeeTypeClasses = "bg-success text-dark bg-opacity-25 text-light";
+      employeeTypeClasses = "bg-success text-dark bg-opacity-10 text-light";
       icon = "<i class='bi bi-cup'></i>";
       break;
   }
