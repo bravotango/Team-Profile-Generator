@@ -14,37 +14,46 @@ const Employee = {
 
 const htmlCard = (e) => {
   let roleInfo;
+  let employeeTypeClasses = "";
+  let icon = "";
   switch (e.getRole()) {
     case Employee.Manager:
-      roleInfo = `Office #: ${e.officeNumber}`;
+      roleInfo = `<strong>Office #</strong> ${e.officeNumber}`;
+      employeeTypeClasses = "bg-primary bg-gradient text-light";
+      icon = "<i class='bi bi-cup-straw'></i>";
       break;
     case Employee.Intern:
-      roleInfo = `School: ${e.getSchool()}`;
+      roleInfo = `<strong>School:</strong> ${e.getSchool()}`;
+      employeeTypeClasses = "bg-success bg-gradient text-light";
+      icon = "<i class='bi bi-mortarboard-fill'></i>";
       break;
     case Employee.Engineer:
-      roleInfo = `Github: ${e.getGithub()}`;
+      roleInfo = `<strong>Github:</strong> ${e.getGithub()}`;
+      employeeTypeClasses = "bg-success text-dark bg-opacity-25 text-light";
+      icon = "<i class='bi bi-cup'></i>";
       break;
   }
   return `<div class="col-sm-12 col-lg-6">
   <div class='card'>
-    <div class="card-header">
+    <div class="card-header ${employeeTypeClasses}">
       <h5 class='card-title'>
+      ${icon}
       ${e.getRole()}
       </h5>
     </div>
     <div class='card-body'>
       <ul class='list-group'>
         <li class='list-group-item list-group-item-primary'>
-          Name: ${e.getName()}
+          <h6>
+            ${e.getName().toUpperCase()} 
+          </h6>
         </li>
         <li class='list-group-item'>
-          Id: ${e.getId()}
+          <strong>Id </strong> ${e.getId()}
         </li>        
         <li class='list-group-item'>
-          Email: 
-          <a href="mailto:${e.employeeEmail}">
-             ${e.getEmail()}
-          </a>
+          <strong>Email </strong> 
+          <a href="mailto: ${e.employeeEmail}">${e.getEmail()}</a>
         </li>
         <li class='list-group-item list-group-item-secondary'>
           ${roleInfo}
@@ -71,6 +80,7 @@ const generateHTML = (employees) => {
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
       <title>Team Profile</title>
   </head>
   <body>
