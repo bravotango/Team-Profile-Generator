@@ -18,18 +18,18 @@ const htmlCard = (e) => {
   let icon = "";
   switch (e.getRole()) {
     case Employee.Manager:
-      roleInfo = `<strong>Office #</strong> ${e.officeNumber}`;
+      roleInfo = `<i class="bi bi-building"></i> Office: <strong>${e.officeNumber}</strong>`;
       employeeTypeClasses = "bg-primary bg-gradient text-light";
       icon = "<i class='bi bi-cup-straw'></i>";
       break;
     case Employee.Intern:
-      roleInfo = `<strong>School</strong> ${e.getSchool()}`;
+      roleInfo = `<i class="bi bi-globe"></i> School: <strong>${e.getSchool()}</strong>`;
       employeeTypeClasses = "bg-success bg-gradient text-light";
       icon = "<i class='bi bi-mortarboard-fill'></i>";
       break;
     case Employee.Engineer:
-      roleInfo = `<strong>Github</strong> ${e.getGithub()}`;
-      employeeTypeClasses = "bg-success text-dark bg-opacity-10 text-light";
+      roleInfo = `<i class="bi-github" role="img" aria-label="GitHub"></i> Github: ${e.getGithub()}`;
+      employeeTypeClasses = "bg-secondary bg-gradient text-light";
       icon = "<i class='bi bi-cup'></i>";
       break;
   }
@@ -38,17 +38,19 @@ const htmlCard = (e) => {
     <div class="card-header ${employeeTypeClasses}">
       <h5 class='card-title'>
       ${icon}
-      ${e.getRole()}:
       ${e.getName().toUpperCase()}
       </h5>
     </div>
     <div class='card-body'>
       <ul class='list-group'>
         <li class='list-group-item'>
-          <strong>Id </strong> ${e.getId()}
-        </li>        
+          Role: <strong>${e.getRole()}</strong>
+        </li>
         <li class='list-group-item'>
-          <strong>Email </strong> 
+          Id: <strong>${e.getId()}</strong>
+        </li>            
+        <li class='list-group-item'>
+          Email:  
           <a href="mailto: ${e.employeeEmail}">${e.getEmail()}</a>
         </li>
         <li class='list-group-item list-group-item-secondary'>
