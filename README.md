@@ -2,7 +2,7 @@
 
 This is a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. Testing is key to making code maintainable, so there are unit tests for every part of the code to ensure that the application is working without errors.
 
-## User Story
+## Satisfied User Story
 
 ```
 AS A manager
@@ -39,22 +39,6 @@ THEN I am prompted to enter the intern’s name, ID, email, and school, and I am
 
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
-```
-
-## Screen shot of generated HTML
-
-The following image shows the generated HTML’s appearance:
-
-![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info.](./Assets/10-object-oriented-programming-homework-demo.png)
-
-The styling is leveraging BootStrap CSS 5.
-
-## Starting the application
-
-This application uses [Jest](https://www.npmjs.com/package/jest) for running the unit tests and [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user. The application will be invoked by using the following command:
-
-```bash
-node index.js
 ```
 
 ## Application structure
@@ -117,6 +101,49 @@ In addition to `Employee`'s properties and methods, `Intern` also have the follo
 
 - `getRole()`&mdash;overridden to return `'Intern'`
 
+## Screen shot of generated HTML
+
+The following image shows the generated HTML’s appearance:
+
+![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info.](./Assets/10-object-oriented-programming-homework-demo.png)
+
+The styling is leveraging BootStrap CSS 5.
+
+## Starting the application
+
+This application uses [Jest](https://www.npmjs.com/package/jest) for running the unit tests and [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user. The application will be invoked by using the following command:
+
+```bash
+node index.js
+```
+
+## Entries used in demo video
+
+```
+.
+├── Manager
+   ├── Bill Lumbergh
+   ├── 1
+   ├── bill.lumbergh@initech.com
+   ├── cubical 452B
+├── Intern
+   ├── Peter Gibbons
+   ├── 22
+   ├── peter.gibbons@initech.com
+   ├── University of Washington
+├── Engineer
+   ├── Samir Nagheenanajar
+   ├── 33
+   ├── samir.nagheenanajar@initech.com
+   ├── bravotango
+├── Engineer
+   ├── Michael Bolton
+   ├── 44
+   ├── michael.bolton@initech.com
+   ├── bolton
+
+```
+
 ## Grading Requirements
 
 This homework is graded based on the following criteria:
@@ -149,13 +176,13 @@ This homework is graded based on the following criteria:
 
 - Repository contains multiple descriptive commit messages.
 
-- Repository contains a high-quality readme with description and a link to a walkthrough video.
+- Repository contains a high-quality readme with description and a link to a walk-through video.
 
 ## Review
 
 You are required to submit the following for review:
 
-- A walkthrough video that demonstrates the functionality of the application and passing tests.
+- A walk-through video that demonstrates the functionality of the application and passing tests.
 
 - A sample HTML file generated using your application.
 
