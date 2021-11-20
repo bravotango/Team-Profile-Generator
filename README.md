@@ -115,13 +115,21 @@ The following image shows the generated HTML’s appearance. The styling is leve
 
 ## Starting the application
 
-This application uses [Jest](https://www.npmjs.com/package/jest) for running the unit tests and [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user. The application will be invoked by using the following command:
+This application uses [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user. The application will be invoked by using the following command:
 
 ```bash
 node index.js
 ```
 
-## Demo video
+## Running tests
+
+This application uses [Jest](https://www.npmjs.com/package/jest) for running the unit tests. The application's tests will be invoked by using the following command:
+
+```bash
+npm test
+```
+
+## Demo video of running tests & application
 
 [Demo video of running tests & program & output](https://watch.screencastify.com/v/MsUQlvRll3RFSB3oDrYQ)
 
