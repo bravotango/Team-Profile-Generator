@@ -134,6 +134,8 @@ This application uses [Jest](https://www.npmjs.com/package/jest) for running the
 npm test
 ```
 
+![Jest tests ALL passing](./images/tests.png)
+
 ## Demo video of running tests & application
 
 [Demo video of running tests & program & output](https://watch.screencastify.com/v/MsUQlvRll3RFSB3oDrYQ)
