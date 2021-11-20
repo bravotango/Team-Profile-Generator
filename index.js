@@ -33,33 +33,34 @@ const htmlCard = (e) => {
       icon = "<i class='bi bi-cup'></i>";
       break;
   }
+
   return `<div class="col-sm-12 col-lg-6">
-  <div class='card'>
-    <div class="card-header ${employeeTypeClasses}">
-      <h5 class='card-title'>
-      ${icon}
-      ${e.getName().toUpperCase()}
-      </h5>
-    </div>
-    <div class='card-body'>
-      <ul class='list-group'>
-        <li class='list-group-item'>
-          Role: <strong>${e.getRole()}</strong>
-        </li>
-        <li class='list-group-item'>
-          Id: <strong>${e.getId()}</strong>
-        </li>            
-        <li class='list-group-item'>
-          Email:  
-          <a href="mailto: ${e.employeeEmail}">${e.getEmail()}</a>
-        </li>
-        <li class='list-group-item list-group-item-secondary'>
-          ${roleInfo}
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>`;
+          <div class='card'>
+            <div class="card-header ${employeeTypeClasses}">
+              <h5 class='card-title'>
+              ${icon}
+              ${e.getName().toUpperCase()}
+              </h5>
+            </div>
+            <div class='card-body'>
+              <ul class='list-group'>
+                <li class='list-group-item'>
+                  Role: <strong>${e.getRole()}</strong>
+                </li>
+                <li class='list-group-item'>
+                  Id: <strong>${e.getId()}</strong>
+                </li>            
+                <li class='list-group-item'>
+                  Email:  
+                  <a href="mailto: ${e.getEmail()}">${e.getEmail()}</a>
+                </li>
+                <li class='list-group-item list-group-item-secondary'>
+                  ${roleInfo}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>`;
 };
 
 const displayEmployees = (employees) => {
@@ -71,6 +72,9 @@ const displayEmployees = (employees) => {
 };
 
 const generateHTML = (employees) => {
+  const styles = [];
+  styles.push(`body{font-size:80%;}`);
+
   return `<!DOCTYPE html>
   <html lang="en">
   <head>
@@ -79,6 +83,7 @@ const generateHTML = (employees) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+      <style>${styles.join("")}</style>
       <title>Team Profile</title>
   </head>
   <body>
@@ -88,12 +93,12 @@ const generateHTML = (employees) => {
       </div>
     </div>
     <div class="container">
-      <div class="row g-4">
+      <div class="row g-5">
         ${displayEmployees(employees)}
       </div>
     </div>
   </body>
-  </html>`;
+</html>`;
 };
 
 // Write to HTML file
