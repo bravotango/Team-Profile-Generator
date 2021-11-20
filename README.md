@@ -154,4 +154,4 @@ node index.js
 
 ## Link to output HTML file
 
-[Output HTML file](https://github.com/bravotango/Team-Profile-Generator/blob/main/dist/index.html)
+[Output HTML file](https://htmlpreview.github.io/?https://github.com/bravotango/Team-Profile-Generator/blob/main/dist/index.html)
