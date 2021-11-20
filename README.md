@@ -51,7 +51,12 @@ THEN I exit the application, and the HTML is generated
 │   ├── Intern.test.js
 │   └── Manager.test.js
 ├── dist/                  // rendered output (HTML)
+│   ├── index.html
 ├── lib/                   // classes
+│   ├── Employee.js
+│   ├── Engineer.js
+│   ├── Intern.js
+│   └── Manager.js
 ├── .gitignore             // indicates which folders and files Git should ignore
 ├── index.js               // runs the application
 └── package.json
