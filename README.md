@@ -101,13 +101,17 @@ In addition to `Employee`'s properties and methods, `Intern` also have the follo
 
 - `getRole()`&mdash;overridden to return `'Intern'`
 
-## Screen shot of generated HTML
+## Screenshots of generated HTML
 
-The following image shows the generated HTML’s appearance:
+The following image shows the generated HTML’s appearance. The styling is leveraging BootStrap CSS 5.
 
-![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info.](./Assets/10-object-oriented-programming-homework-demo.png)
+### Desktop screenshot
 
-The styling is leveraging BootStrap CSS 5.
+![Desktop screenshot](./images/desktop.png)
+
+### Responsive mobile screenshot
+
+![mobile screenshot](./images/mobile.png)
 
 ## Starting the application
 
@@ -117,7 +121,11 @@ This application uses [Jest](https://www.npmjs.com/package/jest) for running the
 node index.js
 ```
 
-## Entries used in demo video
+## Demo video
+
+[Demo video of running tests & program & output](https://watch.screencastify.com/v/MsUQlvRll3RFSB3oDrYQ)
+
+### Entries used in demo video
 
 ```
 .
@@ -144,50 +152,6 @@ node index.js
 
 ```
 
-## Grading Requirements
+## Link to output HTML file
 
-This homework is graded based on the following criteria:
-
-### Deliverables: 15%
-
-- A sample HTML file generated using the application must be submitted.
-
-- Your GitHub repository containing your application code.
-
-### Walk-through Video: 32%
-
-- A walk-through video that demonstrates the functionality of the Team Profile Generator and passing tests must be submitted, and a link to the video should be included in your README file.
-
-- The walk-through video must show all four tests passing from the command line.
-
-- The walk-through video must demonstrate how a user would invoke the application from the command line.
-
-- The walk-through video must demonstrate how a user would enter responses to all of the prompts in the application.
-
-- The walk-through video must demonstrate a generated HTML file that matches the user input.
-
-### Repository Quality: 13%
-
-- Repository has a unique name.
-
-- Repository follows best practices for file structure and naming conventions.
-
-- Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-- Repository contains multiple descriptive commit messages.
-
-- Repository contains a high-quality readme with description and a link to a walk-through video.
-
-## Review
-
-You are required to submit the following for review:
-
-- A walk-through video that demonstrates the functionality of the application and passing tests.
-
-- A sample HTML file generated using your application.
-
-- The URL of the GitHub repository, with a unique name and a readme describing the project.
-
----
-
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+[Output HTML file](https://github.com/bravotango/Team-Profile-Generator/blob/main/dist/index.html)
