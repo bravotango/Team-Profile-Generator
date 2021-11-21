@@ -1,4 +1,5 @@
 const inquirer = require("inquirer");
+const emailValidator = require("email-validator");
 const Manager = require("./lib/Manager.js");
 const Intern = require("./lib/Intern.js");
 const Engineer = require("./lib/Engineer.js");
@@ -108,6 +109,17 @@ function writeToFile(fileName, data) {
   });
 }
 
+const validation = {
+  required: (response) => {
+    return response ? true : console.error("Required answer. Try again...");
+  },
+  email: (response) => {
+    return emailValidator.validate(response)
+      ? true
+      : console.error(" = invalid email. Try again...");
+  },
+};
+
 const questions = () => {
   inquirer
     .prompt([
@@ -115,21 +127,33 @@ const questions = () => {
         type: "input",
         name: "managerName",
         message: "What is the team manager's name?",
+        validate: (response) => {
+          return validation.required(response);
+        },
       },
       {
         type: "input",
         name: "managerId",
         message: "What is the manager's employee Id?",
+        validate: (response) => {
+          return validation.required(response);
+        },
       },
       {
         type: "input",
         name: "managerEmail",
         message: "What is the manager's email address?",
+        validate: (response) => {
+          return validation.required && validation.email(response);
+        },
       },
       {
         type: "input",
         name: "managerOfficeNumber",
         message: "What is the manager's office number?",
+        validate: (response) => {
+          return validation.required(response);
+        },
       },
     ])
     .then((answers) => {
@@ -157,28 +181,43 @@ const repeatQuestions = () => {
         type: "input",
         message: "What is the employee name?",
         name: "employeeName",
+        validate: (response) => {
+          return validation.required(response);
+        },
       },
       {
         type: "input",
         message: "What is the employee's Id?",
         name: "employeeId",
+        validate: (response) => {
+          return validation.required(response);
+        },
       },
       {
         type: "input",
         message: "What is the employee's Email?",
         name: "employeeEmail",
+        validate: (response) => {
+          return validation.required && validation.email(response);
+        },
       },
       {
         type: "input",
         message: "What school is the intern from?",
         name: "internSchool",
         when: (answers) => answers.employeeType === Employee.Intern,
+        validate: (response) => {
+          return validation.required(response);
+        },
       },
       {
         type: "input",
         message: "What is the engineer's gitHub username?",
         name: "engineerGitHubUsername",
         when: (answers) => answers.employeeType === Employee.Engineer,
+        validate: (response) => {
+          return validation.required(response);
+        },
       },
       {
         type: "confirm",
