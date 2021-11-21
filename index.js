@@ -144,7 +144,7 @@ const questions = () => {
         name: "managerEmail",
         message: "What is the manager's email address?",
         validate: (response) => {
-          return validation.required && validation.email(response);
+          return validation.required(response) && validation.email(response);
         },
       },
       {
@@ -198,7 +198,7 @@ const repeatQuestions = () => {
         message: "What is the employee's Email?",
         name: "employeeEmail",
         validate: (response) => {
-          return validation.required && validation.email(response);
+          return validation.required(response) && validation.email(response);
         },
       },
       {
